@@ -1,5 +1,0 @@
-a juka ju
-
-
-println("A juka ju!!! Avada Kedavra!!!");
-papi
