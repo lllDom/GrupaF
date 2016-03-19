@@ -26,9 +26,9 @@ hs_err_pid*
 # *.css
 # *.fxml
 
-.settings
-.classpath
-.project
+#.settings
+#.classpath
+#.project
 
 #ignore all temp files
 *.*~
