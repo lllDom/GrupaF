@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+      <Separator layoutX="481.0" layoutY="646.0" opacity="0.2" prefHeight="3.0" prefWidth="687.0" />
+      <TreeTableView fx:id="tabZarzadzaniePracownikami" layoutX="52.0" layoutY="107.0" prefHeight="198.0" prefWidth="527.0">
+        <columns>
+          <TreeTableColumn prefWidth="69.0" text="id" />
+          <TreeTableColumn minWidth="0.0" prefWidth="133.0" text="login" />
+            <TreeTableColumn prefWidth="141.0" text="imie" />
+            <TreeTableColumn prefWidth="183.0" text="nazwisko" />
+        </columns>
+      </TreeTableView>
+      <TreeTableView fx:id="tabPrzegladarkaDanychAdmin" layoutX="52.0" layoutY="406.0" prefHeight="198.0" prefWidth="1092.0">
+         <columns>
+            <TreeTableColumn prefWidth="110.0" text="id_zlecenia" />
+            <TreeTableColumn prefWidth="219.0" text="nazwa zlecenia" />
+            <TreeTableColumn fx:id="tab_przegladarka_danych" prefWidth="162.0" text="data zakonczenia" />
+            <TreeTableColumn prefWidth="211.0" text="login pracownika" />
+            <TreeTableColumn prefWidth="180.0" text="imie klienta" />
+            <TreeTableColumn prefWidth="209.0" text="nazwisko klienta" />
+         </columns>
+      </TreeTableView>
+      <Button fx:id="buttonFiltrujAdmin" layoutX="1061.0" layoutY="632.0" mnemonicParsing="false" text="Filtruj" />
+      <Text fill="WHITE" layoutX="901.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Co chcesz znaleźć?" />
+      <Text fx:id="tytulPanelAdmina" fill="#cdcdcd" layoutX="52.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SERWIS KOMPUTEROWY | PANEL ADMINISTRATORA" wrappingWidth="782.625">
+         <font>
+            <Font name="Franklin Gothic Medium" size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonWylogujAdmin" layoutX="1043.0" layoutY="21.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Wyloguj się" />
+      <Separator layoutX="814.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="352.0" />
+      <Separator layoutX="602.0" layoutY="333.0" opacity="0.2" prefHeight="3.0" prefWidth="566.0" />
+      <Button fx:id="buttonNoweKontoPracownika" layoutX="72.0" layoutY="319.0" mnemonicParsing="false" text="Dodaj nowe konto" />
+      <Separator layoutX="-379.0" layoutY="208.0" opacity="0.2" prefHeight="5.0" prefWidth="819.0" rotate="-90.0" scaleX="0.3" />
+      <Separator layoutX="815.0" layoutY="209.0" opacity="0.2" prefHeight="5.0" prefWidth="702.0" rotate="90.0" scaleX="0.35" />
+      <Separator layoutX="201.0" layoutY="384.0" opacity="0.2" prefHeight="3.0" prefWidth="966.0" />
+      <Separator layoutX="1037.0" layoutY="514.0" opacity="0.2" prefHeight="4.0" prefWidth="262.0" rotate="90.0" />
+      <Separator layoutX="-100.0" layoutY="513.0" opacity="0.2" prefHeight="4.0" prefWidth="262.0" rotate="90.0" />
+      <Label layoutX="82.0" layoutY="79.0" text="Zarządzanie kontami pracowników" textFill="#787878">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="30.0" layoutY="85.0" opacity="0.2" prefHeight="6.0" prefWidth="52.0" />
+      <Label layoutX="83.0" layoutY="374.0" text="Przeglądarka danych" textFill="#787878">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="32.0" layoutY="383.0" opacity="0.2" prefHeight="3.0" prefWidth="52.0" />
+      <TreeTableView fx:id="tabZarzadzanieKlientami" layoutX="616.0" layoutY="107.0" prefHeight="198.0" prefWidth="527.0">
+         <columns>
+            <TreeTableColumn prefWidth="69.0" text="id" />
+            <TreeTableColumn minWidth="0.0" prefWidth="143.0" text="imie" />
+            <TreeTableColumn prefWidth="149.0" text="nazwisko" />
+            <TreeTableColumn prefWidth="165.0" text="nazwa_firmy" />
+         </columns>
+      </TreeTableView>
+      <Button fx:id="buttonNoweKontoKlienta" layoutX="754.0" layoutY="321.0" mnemonicParsing="false" text="Dodaj nowe konto" />
+      <Button fx:id="buttonUsunKontoKlienta" layoutX="907.0" layoutY="321.0" mnemonicParsing="false" text="Usuń konto" />
+      <Button fx:id="buttonEdytujKontoKlienta" layoutX="1014.0" layoutY="321.0" mnemonicParsing="false" text="Edytuj konto" />
+      <Separator layoutX="472.0" layoutY="210.0" opacity="0.2" prefHeight="3.0" prefWidth="243.0" rotate="90.0" />
+      <Separator layoutX="479.0" layoutY="210.0" opacity="0.2" prefHeight="3.0" prefWidth="243.0" rotate="90.0" />
+      <Separator layoutX="28.0" layoutY="333.0" opacity="0.2" prefHeight="3.0" prefWidth="566.0" />
+      <Label layoutX="643.0" layoutY="80.0" text="Zarządzanie kontami klientów" textFill="#787878">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="281.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="313.0" />
+      <Separator layoutX="601.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="43.0" />
+      <Button fx:id="buttonWiecejSzczegolowAdmin" disable="true" layoutX="338.0" layoutY="631.0" mnemonicParsing="false" text="Więcej szczegółów" />
+      <Separator layoutX="31.0" layoutY="647.0" opacity="0.2" prefHeight="3.0" prefWidth="307.0" />
+      <Button fx:id="buttonUsunKontoPracownika" layoutX="225.0" layoutY="319.0" mnemonicParsing="false" text="Usuń konto" />
+      <Button fx:id="buttonEdytujKontoPracownika" layoutX="332.0" layoutY="319.0" mnemonicParsing="false" text="Edytuj konto" />
+      <ChoiceBox fx:id="listaTrybowAdmin" layoutX="71.0" layoutY="632.0" prefWidth="150.0" />
+      <Button fx:id="buttonZmienTrybAdmin" layoutX="235.0" layoutY="632.0" mnemonicParsing="false" text="Zmień tryb" />
+      <ChoiceBox fx:id="listaKolumnyAdmin" layoutX="738.0" layoutY="632.0" prefWidth="150.0" />
+      <TextField fx:id="poleCoSzukaszAdmin" layoutX="901.0" layoutY="632.0" prefHeight="31.0" prefWidth="150.0" />
+   </children>
+</Pane>

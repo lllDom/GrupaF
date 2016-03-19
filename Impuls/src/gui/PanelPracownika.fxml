@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+      <Separator layoutX="31.0" layoutY="646.0" opacity="0.2" prefHeight="3.0" prefWidth="1137.0" />
+      <TreeTableView fx:id="tabOczekujaceZleceniaPracownik" layoutX="52.0" layoutY="406.0" prefHeight="198.0" prefWidth="1092.0">
+         <columns>
+            <TreeTableColumn prefWidth="211.0" text="nazwa_zlecenia" />
+            <TreeTableColumn prefWidth="437.0" text="opis_zlecenia" />
+            <TreeTableColumn prefWidth="201.0" text="czas_realizacji" />
+            <TreeTableColumn prefWidth="242.0" text="data_przyjecia" />
+         </columns>
+      </TreeTableView>
+      <Button fx:id="buttonWybierzZleceniePracownik" layoutX="77.0" layoutY="631.0" mnemonicParsing="false" text="Wybierz zlecenie" />
+      <Text fill="#cdcdcd" layoutX="52.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SERWIS KOMPUTEROWY | PANEL PRACOWNIKA" wrappingWidth="782.625">
+         <font>
+            <Font name="Franklin Gothic Medium" size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonWylogujPracownik" layoutX="1043.0" layoutY="21.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="100.0" text="Wyloguj się" />
+      <Separator layoutX="201.0" layoutY="384.0" opacity="0.2" prefHeight="3.0" prefWidth="966.0" />
+      <Separator layoutX="1037.0" layoutY="514.0" opacity="0.2" prefHeight="4.0" prefWidth="262.0" rotate="90.0" />
+      <Separator layoutX="-100.0" layoutY="513.0" opacity="0.2" prefHeight="4.0" prefWidth="262.0" rotate="90.0" />
+      <Label layoutX="83.0" layoutY="374.0" text="Oczekujące zlecenia" textFill="#787878">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="32.0" layoutY="383.0" opacity="0.2" prefHeight="3.0" prefWidth="52.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="58.0" layoutX="52.0" layoutY="119.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="77.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYTUŁ:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="58.0" layoutX="611.0" layoutY="119.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="637.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CZAS NA REALIZACJĘ:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="99.0" layoutX="52.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="77.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPIS:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f5f5" height="58.0" layoutX="611.0" layoutY="200.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="637.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERMIN ZAKOŃCZENIA:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="wypiszTytulPracownik" layoutX="148.0" layoutY="135.0" prefHeight="27.0" prefWidth="416.0" text="Wymiana procesora">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="wypiszOpisPracownik" alignment="TOP_LEFT" layoutX="140.0" layoutY="216.0" prefHeight="72.0" prefWidth="416.0" text="Treść w której będzie opis zlecenia" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="wypiszCzasRealizacjiPracownik" layoutX="865.0" layoutY="135.0" prefHeight="27.0" prefWidth="289.0" text="12 godzin">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="wypiszTerminPracownik" layoutX="881.0" layoutY="216.0" prefHeight="27.0" prefWidth="289.0" text="13 sierpnie 2016, 13:54">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="215.0" layoutY="91.0" opacity="0.2" prefHeight="6.0" prefWidth="954.0" />
+      <Label layoutX="91.0" layoutY="82.0" text="Informacje o zleceniu" textFill="#787878">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1050.0" layoutY="209.0" opacity="0.2" prefHeight="3.0" prefWidth="235.0" rotate="90.0" />
+      <Separator layoutX="30.0" layoutY="327.0" opacity="0.2" prefHeight="3.0" prefWidth="1137.0" />
+      <Button fx:id="buttonAkceptujZleceniePracownik" layoutX="886.0" layoutY="311.0" mnemonicParsing="false" text="Akceptuj zlecenie" />
+      <Button fx:id="buttonZakonczZleceniePracownik" layoutX="1039.0" layoutY="311.0" mnemonicParsing="false" text="Zakończ" />
+      <Separator layoutX="-87.0" layoutY="207.0" opacity="0.2" prefHeight="3.0" prefWidth="235.0" rotate="90.0" />
+      <Separator layoutX="31.0" layoutY="88.0" opacity="0.2" prefHeight="6.0" prefWidth="58.0" />
+   </children>
+</Pane>
