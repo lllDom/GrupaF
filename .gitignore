@@ -32,3 +32,6 @@ hs_err_pid*
 
 #ignore all temp files
 *.*~
+
+# .xmi
+*.xmi
