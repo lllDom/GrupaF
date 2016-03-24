@@ -70,7 +70,6 @@
             <TreeTableColumn prefWidth="165.0" text="nazwa_firmy" />
          </columns>
       </TreeTableView>
-      <Button fx:id="buttonNoweKontoKlienta" layoutX="754.0" layoutY="321.0" mnemonicParsing="false" text="Dodaj nowe konto" />
       <Button fx:id="buttonUsunKontoKlienta" layoutX="907.0" layoutY="321.0" mnemonicParsing="false" text="Usuń konto" />
       <Button fx:id="buttonEdytujKontoKlienta" layoutX="1014.0" layoutY="321.0" mnemonicParsing="false" text="Edytuj konto" />
       <Separator layoutX="472.0" layoutY="210.0" opacity="0.2" prefHeight="3.0" prefWidth="243.0" rotate="90.0" />

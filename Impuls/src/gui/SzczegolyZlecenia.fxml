@@ -21,95 +21,95 @@
             <Font name="Franklin Gothic Medium" size="28.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="42.0" layoutX="35.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYTUŁ:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d3d3d3" height="35.0" layoutX="35.0" layoutY="95.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TYTUŁ:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszTytulSzczegoly" layoutX="120.0" layoutY="103.0" prefHeight="27.0" prefWidth="416.0" text="wprowadz tytul">
+      <Label fx:id="wypiszTytulSzczegoly" layoutX="120.0" layoutY="100.0" prefHeight="27.0" prefWidth="416.0" text="wprowadz tytul">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="95.0" layoutX="35.0" layoutY="147.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPIS: ">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="95.0" layoutX="35.0" layoutY="139.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OPIS: ">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszOpisSzczegoly" alignment="TOP_LEFT" layoutX="106.0" layoutY="163.0" prefHeight="70.0" prefWidth="447.0" text="wprowadz opis" wrapText="true">
+      <Label fx:id="wypiszOpisSzczegoly" alignment="TOP_LEFT" layoutX="106.0" layoutY="155.0" prefHeight="70.0" prefWidth="447.0" text="wprowadz opis" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="95.0" layoutX="35.0" layoutY="252.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UWAGI:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="95.0" layoutX="35.0" layoutY="244.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UWAGI:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszUwagiSzczegoly" alignment="TOP_LEFT" layoutX="130.0" layoutY="268.0" prefHeight="70.0" prefWidth="416.0" text="wprowadz uwagi" wrapText="true">
+      <Label fx:id="wypiszUwagiSzczegoly" alignment="TOP_LEFT" layoutX="130.0" layoutY="260.0" prefHeight="70.0" prefWidth="416.0" text="wprowadz uwagi" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="357.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA PRZYJĘCIA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="348.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="48.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA PRZYJĘCIA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszDatePrzyjeciaSzczegoly" layoutX="225.0" layoutY="365.0" prefHeight="27.0" prefWidth="329.0" text="wprowadz date przyjecia">
+      <Label fx:id="wypiszDatePrzyjeciaSzczegoly" layoutX="224.0" layoutY="353.0" prefHeight="27.0" prefWidth="329.0" text="wprowadz date przyjecia">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="408.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA ROZPOCZĘCIA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="34.0" layoutY="394.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="48.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA ROZPOCZĘCIA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszDateRozpoczeciaSzczegoly" layoutX="262.0" layoutY="416.0" prefHeight="27.0" prefWidth="294.0" text="wprowadz date rozpoczecia">
+      <Label fx:id="wypiszDateRozpoczeciaSzczegoly" layoutX="261.0" layoutY="397.0" prefHeight="27.0" prefWidth="294.0" text="wprowadz date rozpoczecia">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="459.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA ZAKOŃCZENIA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="440.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA ZAKOŃCZENIA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszDateZakonczeniaSzczegoly" layoutX="268.0" layoutY="467.0" prefHeight="27.0" prefWidth="288.0" text="wprowadz date zakonczenia">
+      <Label fx:id="wypiszDateZakonczeniaSzczegoly" layoutX="268.0" layoutY="443.0" prefHeight="27.0" prefWidth="288.0" text="wprowadz date zakonczenia">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="511.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="540.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMIĘ KLIENTA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="486.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMIĘ KLIENTA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszImieKlientaSzczegoly" layoutX="193.0" layoutY="519.0" prefHeight="27.0" prefWidth="360.0" text="wprowadz imie klienta">
+      <Label fx:id="wypiszImieKlientaSzczegoly" layoutX="193.0" layoutY="489.0" prefHeight="27.0" prefWidth="360.0" text="wprowadz imie klienta">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="564.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWISKO KLIENTA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="533.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="557.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWISKO KLIENTA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszNazwiskoKlientaSzczegoly" layoutX="259.0" layoutY="572.0" prefHeight="27.0" prefWidth="294.0" text="wprowadz nazwisko klienta">
+      <Label fx:id="wypiszNazwiskoKlientaSzczegoly" layoutX="259.0" layoutY="536.0" prefHeight="27.0" prefWidth="294.0" text="wprowadz nazwisko klienta">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="667.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="672.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
       <Text layoutX="49.0" layoutY="696.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMIĘ PRACOWNIKA:">
          <font>
             <Font size="22.0" />
@@ -120,24 +120,24 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="719.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="748.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWISKO PRACOWNIKA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="719.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWISKO PRACOWNIKA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszNazwiskoPracownikaSzczegoly" layoutX="320.0" layoutY="727.0" prefHeight="27.0" prefWidth="250.0" text="wprowadz nazwisko">
+      <Label fx:id="wypiszNazwiskoPracownikaSzczegoly" layoutX="320.0" layoutY="722.0" prefHeight="27.0" prefWidth="250.0" text="wprowadz nazwisko">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="42.0" layoutX="35.0" layoutY="616.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
-      <Text layoutX="49.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TELEFON DO KLIENTA:">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="624.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="648.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TELEFON DO KLIENTA:">
          <font>
             <Font size="22.0" />
          </font>
       </Text>
-      <Label fx:id="wypiszTelefonKlientaSzczegoly" layoutX="273.0" layoutY="624.0" prefHeight="27.0" prefWidth="280.0" text="wprowadz telefon do klienta">
+      <Label fx:id="wypiszTelefonKlientaSzczegoly" layoutX="273.0" layoutY="627.0" prefHeight="27.0" prefWidth="280.0" text="wprowadz telefon do klienta">
          <font>
             <Font size="18.0" />
          </font>
@@ -147,5 +147,16 @@
       <Separator layoutX="21.0" layoutY="794.0" opacity="0.2" prefHeight="0.0" prefWidth="559.0" />
       <Button fx:id="buttonZamknijSzczegolyZlecenia" layoutX="433.0" layoutY="780.0" mnemonicParsing="false" text="Zamknij okno" />
       <Separator layoutX="20.0" layoutY="74.0" opacity="0.2" prefHeight="0.0" prefWidth="559.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIGHTGRAY" height="35.0" layoutX="35.0" layoutY="578.0" stroke="BLACK" strokeType="INSIDE" width="532.0" />
+      <Text layoutX="49.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAZWA FIRMY:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Label fx:id="wypiszNazweFirmySzczegoly" layoutX="208.0" layoutY="582.0" prefHeight="27.0" prefWidth="294.0" text="wprowadz nazwe firmy">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

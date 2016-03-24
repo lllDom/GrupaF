@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -12,52 +11,32 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="548.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="313.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="poleEdycjaZleceniaNazwa" layoutX="270.0" layoutY="143.0" prefHeight="25.0" prefWidth="240.0" />
-      <Label layoutX="272.0" layoutY="122.0" text="Nazwa Zlecenia" textFill="WHITE" />
-      <Label layoutX="54.0" layoutY="86.0" text="Dane klienta" textFill="#787878">
+      <TextField fx:id="poleEdycjaZleceniaNazwa" layoutX="37.0" layoutY="143.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="39.0" layoutY="122.0" text="Nazwa Zlecenia" textFill="WHITE" />
+      <Label layoutX="37.0" layoutY="243.0" text="Opis zlecenia" textFill="WHITE" />
+      <TextArea fx:id="poleEdycjaZleceniaOpis" layoutX="37.0" layoutY="264.0" prefHeight="109.0" prefWidth="240.0" />
+      <Label layoutX="50.0" layoutY="86.0" text="Dane zlecenia" textFill="#787878">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="41.0" layoutY="217.0" prefHeight="21.0" prefWidth="41.0" text="Imie" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="275.0" text="Nazwisko" textFill="WHITE" />
-      <Label layoutX="41.0" layoutY="396.0" text="Telefon" textFill="WHITE" />
-      <TextField fx:id="poleEdycjaZleceniaImieKlienta" layoutX="40.0" layoutY="237.0" prefHeight="25.0" prefWidth="161.0" />
-      <TextField fx:id="poleEdycjaZleceniaNazwiskoKlienta" layoutX="40.0" layoutY="296.0" prefHeight="25.0" prefWidth="161.0" />
-      <TextField fx:id="poleEdycjaZleceniaTelefonKlienta" layoutX="40.0" layoutY="417.0" prefHeight="25.0" prefWidth="161.0" />
-      <TextField fx:id="poleEdycjaZleceniaFirmaKlienta" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="161.0" />
-      <Label layoutX="41.0" layoutY="336.0" text="Nazwa firmy" textFill="WHITE" />
-      <Label layoutX="270.0" layoutY="243.0" text="Opis zlecenia" textFill="WHITE" />
-      <TextArea fx:id="poleEdycjaZleceniaOpis" layoutX="270.0" layoutY="264.0" prefHeight="109.0" prefWidth="240.0" />
-      <Label layoutX="283.0" layoutY="86.0" text="Dane zlecenia" textFill="#787878">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Button layoutX="376.0" layoutY="417.0" mnemonicParsing="false" text="Zakończ edycję" />
-      <Button fx:id="buttonEdycjaZleceniaAnuluj" layoutX="304.0" layoutY="417.0" mnemonicParsing="false" text="Anuluj" textOverrun="CLIP" />
-      <CheckBox fx:id="checkboxEdycjaZleceniaTypKlienta" layoutX="40.0" layoutY="182.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="107.0" text="Nowy klient" textFill="WHITE" />
-      <ChoiceBox fx:id="listaEdycjaZleceniaTypKlienta" layoutX="40.0" layoutY="143.0" prefHeight="25.0" prefWidth="161.0" />
-      <Label layoutX="269.0" layoutY="182.0" text="Czas na zlecenie" textFill="WHITE" />
-      <TextField fx:id="poleEdycjaZleceniaCzas" layoutX="269.0" layoutY="203.0" prefHeight="31.0" prefWidth="123.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="548.0" />
-      <Text fx:id="tytulEdycjaZlecenia" fill="#cdcdcd" layoutX="40.0" layoutY="45.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="EDYCJA ZLECENIA" wrappingWidth="321.625">
+      <Button layoutX="143.0" layoutY="417.0" mnemonicParsing="false" text="Zakończ edycję" />
+      <Button fx:id="buttonEdycjaZleceniaAnuluj" layoutX="71.0" layoutY="417.0" mnemonicParsing="false" text="Anuluj" textOverrun="CLIP" />
+      <Label layoutX="36.0" layoutY="182.0" text="Czas na zlecenie" textFill="WHITE" />
+      <TextField fx:id="poleEdycjaZleceniaCzas" layoutX="36.0" layoutY="203.0" prefHeight="31.0" prefWidth="123.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" width="313.0" />
+      <Text fx:id="tytulEdycjaZlecenia" fill="#cdcdcd" layoutX="36.0" layoutY="44.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="EDYCJA ZLECENIA" wrappingWidth="321.625">
          <font>
             <Font name="Franklin Gothic Medium" size="28.0" />
          </font>
       </Text>
-      <Separator layoutX="21.0" layoutY="460.0" opacity="0.2" prefHeight="3.0" prefWidth="202.0" />
-      <Separator layoutX="40.0" layoutY="276.0" opacity="0.2" prefHeight="3.0" prefWidth="366.0" rotate="-90.0" />
-      <Separator layoutX="132.0" layoutY="94.0" opacity="0.2" prefHeight="3.0" prefWidth="90.0" />
-      <Separator layoutX="-162.0" layoutY="276.0" opacity="0.2" prefHeight="3.0" prefWidth="366.0" rotate="90.0" />
-      <Separator layoutX="22.0" layoutY="94.0" opacity="0.2" prefHeight="3.0" prefWidth="25.0" />
-      <Separator layoutX="82.0" layoutY="261.0" opacity="0.2" prefHeight="3.0" prefWidth="335.0" rotate="90.0" />
-      <Separator fx:id="buttonEdycjaZleceniaZakoncz" layoutX="248.0" layoutY="429.0" opacity="0.2" prefHeight="3.0" prefWidth="279.0" />
-      <Separator layoutX="360.0" layoutY="261.0" opacity="0.2" prefHeight="3.0" prefWidth="335.0" rotate="-90.0" />
-      <Separator layoutX="366.0" layoutY="96.0" opacity="0.2" prefHeight="3.0" prefWidth="161.0" />
-      <Separator layoutX="250.0" layoutY="94.0" opacity="0.2" prefHeight="3.0" prefWidth="25.0" />
-      <ChoiceBox fx:id="listaEdycjaZleceniaTypCzasu" layoutX="402.0" layoutY="203.0" prefHeight="31.0" prefWidth="107.0" />
+      <Separator layoutX="-151.0" layoutY="261.0" opacity="0.2" prefHeight="3.0" prefWidth="335.0" rotate="90.0" />
+      <Separator fx:id="buttonEdycjaZleceniaZakoncz" layoutX="16.0" layoutY="429.0" opacity="0.2" prefHeight="3.0" prefWidth="279.0" />
+      <Separator layoutX="127.0" layoutY="261.0" opacity="0.2" prefHeight="3.0" prefWidth="335.0" rotate="-90.0" />
+      <Separator layoutX="133.0" layoutY="96.0" opacity="0.2" prefHeight="3.0" prefWidth="161.0" />
+      <Separator layoutX="17.0" layoutY="94.0" opacity="0.2" prefHeight="3.0" prefWidth="25.0" />
+      <ChoiceBox fx:id="listaEdycjaZleceniaTypCzasu" layoutX="169.0" layoutY="203.0" prefHeight="31.0" prefWidth="107.0" />
    </children>
 </Pane>
