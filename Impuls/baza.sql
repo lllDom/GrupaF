@@ -16,7 +16,6 @@ CREATE TABLE Dane_osobowe (
     nazwisko varchar(25)  NULL,
     nazwa_firmy varchar(30)  NULL,
     numer_telefonu varchar(11)  NULL,
-    mail varchar(15)  NULL,
     CONSTRAINT Dane_osobowe_pk PRIMARY KEY (id_dana_osobowa)
 );
 
@@ -86,63 +85,63 @@ CREATE TABLE Zlecenia (
 -- foreign keys
 -- Reference:  Admin_Dane_osobowe (table: Admin)
 
-ALTER TABLE Admin ADD CONSTRAINT Admin_Dane_osobowe 
+ALTER TABLE Admin ADD CONSTRAINT Admin_Dane_osobowe
     FOREIGN KEY (id_dana_osobowa)
     REFERENCES Dane_osobowe (id_dana_osobowa)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Klienci_Dane_osobowe (table: Klienci)
 
-ALTER TABLE Klienci ADD CONSTRAINT Klienci_Dane_osobowe 
+ALTER TABLE Klienci ADD CONSTRAINT Klienci_Dane_osobowe
     FOREIGN KEY (id_dana_osobowa)
     REFERENCES Dane_osobowe (id_dana_osobowa)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Pracownicy_Dane_osobowe (table: Pracownicy)
 
-ALTER TABLE Pracownicy ADD CONSTRAINT Pracownicy_Dane_osobowe 
+ALTER TABLE Pracownicy ADD CONSTRAINT Pracownicy_Dane_osobowe
     FOREIGN KEY (id_dana_osobowa)
     REFERENCES Dane_osobowe (id_dana_osobowa)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Szefowie_Dane_osobowe (table: Szefowie)
 
-ALTER TABLE Szefowie ADD CONSTRAINT Szefowie_Dane_osobowe 
+ALTER TABLE Szefowie ADD CONSTRAINT Szefowie_Dane_osobowe
     FOREIGN KEY (id_dana_osobowa)
     REFERENCES Dane_osobowe (id_dana_osobowa)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Zlecenia_Klienci (table: Zlecenia)
 
-ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Klienci 
+ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Klienci
     FOREIGN KEY (id_klienta)
     REFERENCES Klienci (id_klienta)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Zlecenia_Pracownicy (table: Zlecenia)
 
-ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Pracownicy 
+ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Pracownicy
     FOREIGN KEY (id_pracownika)
     REFERENCES Pracownicy (id_pracownika)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
 
 -- Reference:  Zlecenia_Szefowie (table: Zlecenia)
 
-ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Szefowie 
+ALTER TABLE Zlecenia ADD CONSTRAINT Zlecenia_Szefowie
     FOREIGN KEY (id_szefa)
     REFERENCES Szefowie (id_szefa)
-    NOT DEFERRABLE 
-    INITIALLY IMMEDIATE 
+    NOT DEFERRABLE
+    INITIALLY IMMEDIATE
 ;
