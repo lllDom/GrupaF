@@ -15,3 +15,4 @@
       <Button fx:id="buttonZamknijKomunikat" layoutX="172.0" layoutY="99.0" mnemonicParsing="false" text="Zamknij" />
    </children>
 </Pane>
+ 
