@@ -34,7 +34,7 @@
             <TreeTableColumn prefWidth="209.0" text="nazwisko klienta" />
          </columns>
       </TreeTableView>
-      <Button fx:id="buttonFiltrujAdmin" layoutX="1061.0" layoutY="632.0" mnemonicParsing="false" text="Filtruj" />
+      <Button fx:id="buttonFiltrujAdmin" layoutX="1063.0" layoutY="632.0" mnemonicParsing="false" text="Filtruj" />
       <Text fill="WHITE" layoutX="901.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Co chcesz znaleźć?" />
       <Text fx:id="tytulPanelAdmina" fill="#cdcdcd" layoutX="52.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SERWIS KOMPUTEROWY | PANEL ADMINISTRATORA" wrappingWidth="782.625">
          <font>
@@ -82,7 +82,7 @@
       </Label>
       <Separator layoutX="281.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="313.0" />
       <Separator layoutX="601.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="43.0" />
-      <Button fx:id="buttonWiecejSzczegolowAdmin" disable="true" layoutX="338.0" layoutY="631.0" mnemonicParsing="false" text="Więcej szczegółów" />
+      <Button fx:id="buttonWiecejSzczegolowAdmin" disable="true" layoutX="340.0" layoutY="631.0" mnemonicParsing="false" text="Więcej szczegółów" />
       <Separator layoutX="31.0" layoutY="647.0" opacity="0.2" prefHeight="3.0" prefWidth="307.0" />
       <Button fx:id="buttonUsunKontoPracownika" layoutX="225.0" layoutY="319.0" mnemonicParsing="false" text="Usuń konto" />
       <Button fx:id="buttonEdytujKontoPracownika" layoutX="332.0" layoutY="319.0" mnemonicParsing="false" text="Edytuj konto" />
