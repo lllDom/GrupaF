@@ -35,3 +35,6 @@ hs_err_pid*
 
 # .xmi
 *.xmi
+
+# ignorowanie plikow
+*.sql.swp
