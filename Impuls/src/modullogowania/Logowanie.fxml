@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="499.0" style="-fx-background-color: #2B2B2B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="modullogowania.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="499.0" style="-fx-background-color: #2B2B2B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="modullogowania.KontrolerLogowania">
   <children>
     <TextField fx:id="poleLoginLogowanie" layoutX="37.0" layoutY="140.0" />
     <PasswordField fx:id="poleHasloLogowanie" layoutX="37.0" layoutY="200.0" />
@@ -26,7 +26,7 @@
     </Text>
     <Text fill="WHITE" layoutX="40.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" />
     <Text fill="WHITE" layoutX="39.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło" />
-    <Button fx:id="buttonZalogujSie" layoutX="117.0" layoutY="260.0" mnemonicParsing="false" text="Zaloguj się" />
+    <Button fx:id="buttonZalogujSie" layoutX="117.0" layoutY="260.0" mnemonicParsing="false" onMousePressed="#zalogujSie" text="Zaloguj się" />
     <Separator layoutX="21.0" layoutY="278.0" opacity="0.2" prefHeight="0.0" prefWidth="221.0" />
     <Separator layoutX="21.0" layoutY="100.0" opacity="0.2" prefHeight="0.0" prefWidth="221.0" />
     <Separator layoutX="153.0" layoutY="188.0" opacity="0.2" prefHeight="3.0" prefWidth="178.0" rotate="90.0" />
