@@ -17,10 +17,11 @@ public class OknoKomunikatu extends Application{
 			scena = new Scene(korzen);
 			primaryStage.setScene(scena);
 			primaryStage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (IOException wyjatek) {
+			wyjatek.printStackTrace();
 		}
 	}
+
 	public static void main(String [] args) {
 		launch(args);
 	}

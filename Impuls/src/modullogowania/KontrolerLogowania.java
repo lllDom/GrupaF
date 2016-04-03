@@ -2,6 +2,7 @@ package modullogowania;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -18,8 +19,8 @@ public class KontrolerLogowania implements Initializable{
 
 	@FXML
 	private void zalogujSie(){
-		System.out.println(poleLoginLogowanie.getText());
-		System.out.println(poleHasloLogowanie.getText());
+		login = poleLoginLogowanie.getText();
+		haslo = poleHasloLogowanie.getText();
 	}
 	@FXML
 	private TextField poleLoginLogowanie;

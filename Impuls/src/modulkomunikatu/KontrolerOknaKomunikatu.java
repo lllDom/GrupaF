@@ -22,6 +22,7 @@ public class KontrolerOknaKomunikatu implements Initializable{
 	public void ustawOpisKomunikatu(String komunikat){
 		poleKomunikat.setText(komunikat);
 	}
+
 	@FXML
 	private Label poleKomunikat;
 
