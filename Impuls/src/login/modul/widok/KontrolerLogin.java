@@ -1,4 +1,4 @@
-package modullogowania;
+package login.modul.widok;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -8,9 +8,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import polaczenie.PolaczenieZBD;
 
-public class KontrolerLogowania implements Initializable{
+public class KontrolerLogin implements Initializable{
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		poleLoginLogowanie.setText("");
@@ -18,19 +18,16 @@ public class KontrolerLogowania implements Initializable{
 	}
 
 	@FXML
-	private void zalogujSie(){
-		login = poleLoginLogowanie.getText();
-		haslo = poleHasloLogowanie.getText();
-	}
-	@FXML
 	private TextField poleLoginLogowanie;
+
 	@FXML
 	private PasswordField poleHasloLogowanie;
+
 	@FXML
 	private Button buttonZalogujSie;
 
+	@FXML
+	private void zalogujSie(){
 
-	private static PolaczenieZBD polaczenie;
-	private static String login;
-	private static String haslo;
+	}
 }
