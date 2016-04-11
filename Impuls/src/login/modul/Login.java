@@ -32,6 +32,10 @@ public class Login extends Application{
 		launch(args);
 	}
 
+	public Scene getScena() {
+		return scena;
+	}
+
 	private Stage glownaScena;
 	private Parent korzen;
 	private Scene scena;
