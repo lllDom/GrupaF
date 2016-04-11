@@ -6,7 +6,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import komunikat.modul.widok.KontrolerKomunikat;
 
 public class Komunikat extends Application{
 
@@ -19,10 +21,14 @@ public class Komunikat extends Application{
 
 	private void zaladujOkno(){
 		try {
-			korzen = FXMLLoader.load(getClass().getResource(komunikat));
-			scena = new Scene(korzen);
+			ladowacz = new FXMLLoader();
+			ladowacz.setLocation(getClass().getResource(komunikat));
+			wartstwa = (Pane)ladowacz.load();
+			scena = new Scene(wartstwa);
 			glownaScena.setScene(scena);
 			glownaScena.show();
+			kontroler = ladowacz.getController();
+			kontroler.ustawKomunikat(this);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -32,8 +38,14 @@ public class Komunikat extends Application{
 		launch(args);
 	}
 
+	public Stage wezGlownaScena() {
+		return glownaScena;
+	}
+
 	private Stage glownaScena;
-	private Parent korzen;
-	private Scene scena;
 	private String komunikat = "widok/Komunikat.fxml";
+	private FXMLLoader ladowacz;
+	private Pane wartstwa;
+	private Scene scena;
+	private KontrolerKomunikat kontroler;
 }

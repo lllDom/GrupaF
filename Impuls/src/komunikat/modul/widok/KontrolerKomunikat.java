@@ -7,12 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import komunikat.modul.Komunikat;
 
 public class KontrolerKomunikat implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		poleKomunikat.setText(komunikat);
 	}
 
 	@FXML
@@ -27,6 +27,13 @@ public class KontrolerKomunikat implements Initializable{
 		glowneOkno.close();
 	}
 
+	public Komunikat wezKomunikat() {
+		return komunikat;
+	}
+	public void ustawKomunikat(Komunikat komunikat) {
+		this.komunikat = komunikat;
+	}
+
 	private Stage glowneOkno;
-	private String komunikat = "Domyslny komunikat";
+	private Komunikat komunikat;
 }
