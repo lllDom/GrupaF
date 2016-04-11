@@ -7,18 +7,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /** Klasa Polaczenia z baza danych. */
-public class PolaczenieZBD {
+public class Polaczenie {
 	/** Prywatny konstruktor klasy PolaczenieZBD. */
-	private PolaczenieZBD(){}
+	private Polaczenie(){}
 
 	/**
 	 * Metoda wezInstancje sprawdza warunek. Czy wewnetrzna instancja klasy PolaczenieZBD
 	 * jest wartosci null. Je¿eli tak to inicjalizuje instancje nowym obiektem tej klasy.
 	 * @return zainicjalizowany obiekt tej klasy typy PolaczenieZBD.
 	 */
-	public static PolaczenieZBD wezInstancje(){
+	public static Polaczenie wezInstancje(){
 		if (instancja == null){
-			instancja = new PolaczenieZBD();
+			instancja = new Polaczenie();
 		}
 		return instancja;
 	}
@@ -66,5 +66,5 @@ public class PolaczenieZBD {
 	private static String nazwaUzytkownika = "postgres";
 	private static String haslo = "haslo";
 	private static Connection polaczenie = null;
-	private static PolaczenieZBD instancja = null;
+	private static Polaczenie instancja = null;
 }

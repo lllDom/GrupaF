@@ -9,7 +9,7 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="408.0" style="-fx-background-color: #2B2B2B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="modulkomunikatu.KontrolerOknaKomunikatu">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="408.0" style="-fx-background-color: #2B2B2B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="komunikat.modul.widok.KontrolerKomunikat">
   <children>
     <Label fx:id="poleKomunikat" alignment="TOP_CENTER" layoutX="26.0" layoutY="29.0" prefHeight="70.0" prefWidth="360.0" text="Label" textFill="#cdcdcd" wrapText="true">
       <font>

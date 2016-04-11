@@ -1,4 +1,4 @@
-package modulkomunikatu;
+package login.modul;
 
 import java.io.IOException;
 
@@ -8,17 +8,23 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class OknoKomunikatu extends Application{
+public class Login extends Application{
 
 	@Override
-	public void start(Stage primaryStage){
+	public void start(Stage glownaScena){
+		this.glownaScena = glownaScena;
+		this.glownaScena.setTitle("Komunikat");
+		zaladujOkno();
+	}
+
+	private void zaladujOkno(){
 		try {
 			korzen = FXMLLoader.load(getClass().getResource(komunikat));
 			scena = new Scene(korzen);
-			primaryStage.setScene(scena);
-			primaryStage.show();
-		} catch (IOException wyjatek) {
-			wyjatek.printStackTrace();
+			glownaScena.setScene(scena);
+			glownaScena.show();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -26,7 +32,8 @@ public class OknoKomunikatu extends Application{
 		launch(args);
 	}
 
+	private Stage glownaScena;
 	private Parent korzen;
 	private Scene scena;
-	private String komunikat = "OknoKomunikatu.fxml";
+	private String komunikat = "widok/Login.fxml";
 }
