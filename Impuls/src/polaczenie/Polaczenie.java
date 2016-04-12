@@ -57,6 +57,32 @@ public class Polaczenie {
 		}
 	}
 
+	public static void ponowniePolacz(){
+		try {
+			Class.forName(nazwaSterownika);
+			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, haslo);
+
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Polaczono z Baza danych!");
+			alter.showAndWait();
+
+		} catch (ClassNotFoundException e) {
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Nie znaleziono sterownika!");
+			alter.showAndWait();
+		} catch (SQLException ex) {
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Podano zle dane polaczenia!");
+			alter.showAndWait();
+		}
+	}
+
 	/**
 	 * Metoda rozlacz() konczy polaczenie z baza danych.
 	 * @exception ClassNotFoundException w razie nie znalezienia sterownika.
