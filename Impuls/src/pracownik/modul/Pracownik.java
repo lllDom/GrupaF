@@ -1,4 +1,4 @@
-package login.modul;
+package pracownik.modul;
 
 import java.io.IOException;
 
@@ -10,8 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class Login extends Application{
-
+public class Pracownik extends Application{
 	@Override
 	public void start(Stage glownaScena){
 		this.glownaScena = glownaScena;
@@ -45,6 +44,6 @@ public class Login extends Application{
 	private Stage glownaScena;
 	private Parent korzen;
 	private Scene scena;
-	private String komunikat = "widok/Login.fxml";
+	private String komunikat = "widok/Pracownik.fxml";
 	private Alert alter;
 }

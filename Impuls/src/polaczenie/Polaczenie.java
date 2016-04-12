@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+
 /** Klasa Polaczenia z baza danych. */
 public class Polaczenie {
 	/** Prywatny konstruktor klasy PolaczenieZBD. */
@@ -31,14 +34,26 @@ public class Polaczenie {
 	public static void polacz(){
 		try {
 			Class.forName(nazwaSterownika);
-
 			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, haslo);
-			System.out.println("Polaczono");
+
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Polaczono z Baza danych!");
+			alter.showAndWait();
 
 		} catch (ClassNotFoundException e) {
-			System.out.println("Nie znaleziono sterownika");
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Nie znaleziono sterownika!");
+			alter.showAndWait();
 		} catch (SQLException ex) {
-			System.out.println("Podano zle dane polaczenia");
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Podano zle dane polaczenia!");
+			alter.showAndWait();
 		}
 	}
 
@@ -52,12 +67,23 @@ public class Polaczenie {
 
 			Class.forName(nazwaSterownika);
 			polaczenie.close();
-			System.out.println("Zakonczono pomyslnie polaczenie");
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Pomyslnie zakonczono polaczenie!");
+			alter.showAndWait();
 
 		} catch (ClassNotFoundException e) {
-			System.out.println("Nie znaleziono sterownika");
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Nie znaleziono sterownika!");
+			alter.showAndWait();
 		} catch (SQLException ex) {
-			System.out.println("Podano zle dane polaczenia");
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Podano zle dane polaczenia!");
+			alter.showAndWait();
 		}
 	}
 
@@ -67,4 +93,5 @@ public class Polaczenie {
 	private static String haslo = "haslo";
 	private static Connection polaczenie = null;
 	private static Polaczenie instancja = null;
+	private static Alert alter;
 }
