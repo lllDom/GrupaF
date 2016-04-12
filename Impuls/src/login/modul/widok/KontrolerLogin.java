@@ -5,12 +5,12 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import komunikat.modul.Komunikat;
-import komunikat.modul.widok.KontrolerKomunikat;
+import javafx.scene.control.Alert.AlertType;
+
 
 public class KontrolerLogin implements Initializable{
 
@@ -34,12 +34,21 @@ public class KontrolerLogin implements Initializable{
 		login = poleLoginLogowanie.getText();
 		haslo = poleHasloLogowanie.getText();
 		if(login.equals("") && haslo.equals("")){
-			Komunikat kon = new Komunikat();
-			KontrolerKomunikat ok = new KontrolerKomunikat();
-
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Pola puste login i haslo!");
+			alter.showAndWait();
+		}else if(login.equals("") || haslo.equals("")){
+			alter = new Alert(AlertType.INFORMATION);
+			alter.setTitle("Komunikat!");
+			alter.setHeaderText(null);
+			alter.setContentText("Login lub haslo jest puste!");
+			alter.showAndWait();
 		}
 	}
 
 	private String login;
 	private String haslo;
+	private Alert alter;
 }
