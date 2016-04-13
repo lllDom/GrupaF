@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -10,18 +15,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
       <Separator layoutX="31.0" layoutY="646.0" opacity="0.2" prefHeight="3.0" prefWidth="1137.0" />
-      <TreeTableView fx:id="tabOczekujaceZleceniaPracownik" layoutX="52.0" layoutY="406.0" prefHeight="198.0" prefWidth="1092.0">
-         <columns>
-            <TreeTableColumn prefWidth="211.0" text="nazwa_zlecenia" />
-            <TreeTableColumn prefWidth="437.0" text="opis_zlecenia" />
-            <TreeTableColumn prefWidth="201.0" text="czas_realizacji" />
-            <TreeTableColumn prefWidth="242.0" text="data_przyjecia" />
-         </columns>
-      </TreeTableView>
       <Button fx:id="buttonWybierzZleceniePracownik" layoutX="77.0" layoutY="631.0" mnemonicParsing="false" text="Wybierz zlecenie" />
       <Text fill="#cdcdcd" layoutX="52.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SERWIS KOMPUTEROWY | PANEL PRACOWNIKA" wrappingWidth="782.625">
          <font>
@@ -94,5 +91,13 @@
       <Button fx:id="buttonZakonczZleceniePracownik" layoutX="1039.0" layoutY="311.0" mnemonicParsing="false" text="Zakończ" />
       <Separator layoutX="-87.0" layoutY="207.0" opacity="0.2" prefHeight="3.0" prefWidth="235.0" rotate="90.0" />
       <Separator layoutX="31.0" layoutY="88.0" opacity="0.2" prefHeight="6.0" prefWidth="58.0" />
+      <TableView fx:id="tabelaZlecenia" layoutX="42.0" layoutY="402.0" prefHeight="219.0" prefWidth="1114.0">
+        <columns>
+          <TableColumn prefWidth="384.0" text="nazwa zlecenia" />
+          <TableColumn prefWidth="476.0" text="opis zlecenia" />
+            <TableColumn prefWidth="154.0" text="czas realizacji" />
+            <TableColumn prefWidth="98.0" text="data przyjecia" />
+        </columns>
+      </TableView>
    </children>
 </Pane>

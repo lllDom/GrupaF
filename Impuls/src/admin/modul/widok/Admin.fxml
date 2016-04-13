@@ -1,5 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -12,29 +17,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="1200.0" style="-fx-background-color: #2B2B2B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#570003" height="58.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
       <Separator layoutX="481.0" layoutY="646.0" opacity="0.2" prefHeight="3.0" prefWidth="687.0" />
-      <TreeTableView fx:id="tabZarzadzaniePracownikami" layoutX="52.0" layoutY="107.0" prefHeight="198.0" prefWidth="527.0">
-        <columns>
-          <TreeTableColumn prefWidth="69.0" text="id" />
-          <TreeTableColumn minWidth="0.0" prefWidth="133.0" text="login" />
-            <TreeTableColumn prefWidth="141.0" text="imie" />
-            <TreeTableColumn prefWidth="183.0" text="nazwisko" />
-        </columns> 
-      </TreeTableView>
-      <TreeTableView fx:id="tabPrzegladarkaDanychAdmin" layoutX="52.0" layoutY="406.0" prefHeight="198.0" prefWidth="1092.0">
-         <columns>
-            <TreeTableColumn prefWidth="110.0" text="id_zlecenia" />
-            <TreeTableColumn prefWidth="219.0" text="nazwa zlecenia" />
-            <TreeTableColumn fx:id="tab_przegladarka_danych" prefWidth="162.0" text="data zakonczenia" />
-            <TreeTableColumn prefWidth="211.0" text="login pracownika" />
-            <TreeTableColumn prefWidth="180.0" text="imie klienta" />
-            <TreeTableColumn prefWidth="209.0" text="nazwisko klienta" />
-         </columns>
-      </TreeTableView>
-      <Button fx:id="buttonFiltrujAdmin" layoutX="1063.0" layoutY="632.0" mnemonicParsing="false" text="Filtruj" />
+      <Button fx:id="buttonFiltrujAdmin" layoutX="1061.0" layoutY="632.0" mnemonicParsing="false" text="Filtruj" />
       <Text fill="WHITE" layoutX="901.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Co chcesz znaleźć?" />
       <Text fx:id="tytulPanelAdmina" fill="#cdcdcd" layoutX="52.0" layoutY="45.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SERWIS KOMPUTEROWY | PANEL ADMINISTRATORA" wrappingWidth="782.625">
          <font>
@@ -62,14 +49,7 @@
          </font>
       </Label>
       <Separator layoutX="32.0" layoutY="383.0" opacity="0.2" prefHeight="3.0" prefWidth="52.0" />
-      <TreeTableView fx:id="tabZarzadzanieKlientami" layoutX="616.0" layoutY="107.0" prefHeight="198.0" prefWidth="527.0">
-         <columns>
-            <TreeTableColumn prefWidth="69.0" text="id" />
-            <TreeTableColumn minWidth="0.0" prefWidth="143.0" text="imie" />
-            <TreeTableColumn prefWidth="149.0" text="nazwisko" />
-            <TreeTableColumn prefWidth="165.0" text="nazwa_firmy" />
-         </columns>
-      </TreeTableView>
+      <Button fx:id="buttonNoweKontoKlienta" layoutX="754.0" layoutY="321.0" mnemonicParsing="false" text="Dodaj nowe konto" />
       <Button fx:id="buttonUsunKontoKlienta" layoutX="907.0" layoutY="321.0" mnemonicParsing="false" text="Usuń konto" />
       <Button fx:id="buttonEdytujKontoKlienta" layoutX="1014.0" layoutY="321.0" mnemonicParsing="false" text="Edytuj konto" />
       <Separator layoutX="472.0" layoutY="210.0" opacity="0.2" prefHeight="3.0" prefWidth="243.0" rotate="90.0" />
@@ -82,7 +62,7 @@
       </Label>
       <Separator layoutX="281.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="313.0" />
       <Separator layoutX="601.0" layoutY="88.0" opacity="0.2" prefHeight="3.0" prefWidth="43.0" />
-      <Button fx:id="buttonWiecejSzczegolowAdmin" disable="true" layoutX="340.0" layoutY="631.0" mnemonicParsing="false" text="Więcej szczegółów" />
+      <Button fx:id="buttonWiecejSzczegolowAdmin" disable="true" layoutX="338.0" layoutY="631.0" mnemonicParsing="false" text="Więcej szczegółów" />
       <Separator layoutX="31.0" layoutY="647.0" opacity="0.2" prefHeight="3.0" prefWidth="307.0" />
       <Button fx:id="buttonUsunKontoPracownika" layoutX="225.0" layoutY="319.0" mnemonicParsing="false" text="Usuń konto" />
       <Button fx:id="buttonEdytujKontoPracownika" layoutX="332.0" layoutY="319.0" mnemonicParsing="false" text="Edytuj konto" />
@@ -90,5 +70,31 @@
       <Button fx:id="buttonZmienTrybAdmin" layoutX="235.0" layoutY="632.0" mnemonicParsing="false" text="Zmień tryb" />
       <ChoiceBox fx:id="listaKolumnyAdmin" layoutX="738.0" layoutY="632.0" prefWidth="150.0" />
       <TextField fx:id="poleCoSzukaszAdmin" layoutX="901.0" layoutY="632.0" prefHeight="31.0" prefWidth="150.0" />
+      <TableView fx:id="tabelaPracownicy" layoutX="42.0" layoutY="106.0" prefHeight="200.0" prefWidth="540.0">
+        <columns>
+          <TableColumn prefWidth="123.0" text="id" />
+          <TableColumn prefWidth="117.0" text="login" />
+            <TableColumn prefWidth="146.0" text="imie" />
+            <TableColumn prefWidth="152.0" text="nazwisko" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabelaKlienci" layoutX="613.0" layoutY="105.0" prefHeight="200.0" prefWidth="540.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="id" />
+          <TableColumn prefWidth="168.0" text="imie" />
+            <TableColumn prefWidth="150.0" text="naziwsko" />
+            <TableColumn prefWidth="145.0" text="nazwa firmy" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabelaGlowna" layoutX="46.0" layoutY="393.0" prefHeight="221.0" prefWidth="1113.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="id zlecenia" />
+          <TableColumn prefWidth="231.0" text="nazwa zlecenia" />
+            <TableColumn prefWidth="180.0" text="data zakonczenia" />
+            <TableColumn prefWidth="210.0" text="login pracownika" />
+            <TableColumn prefWidth="207.0" text="imie klienta" />
+            <TableColumn prefWidth="208.0" text="nazwisko klienta" />
+        </columns>
+      </TableView>
    </children>
 </Pane>
