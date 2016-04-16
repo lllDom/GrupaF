@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import polaczenie.Polaczenie;
 import javafx.scene.control.Alert.AlertType;
 
 
@@ -45,6 +46,9 @@ public class KontrolerLogin implements Initializable{
 			alter.setHeaderText(null);
 			alter.setContentText("Login lub haslo jest puste!");
 			alter.showAndWait();
+		}else{
+			Polaczenie pol = Polaczenie.wezInstancje();
+			pol.polacz();
 		}
 	}
 
