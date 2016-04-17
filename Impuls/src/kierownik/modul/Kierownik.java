@@ -44,6 +44,6 @@ public class Kierownik extends Application{
 	private Stage glownaScena;
 	private Parent korzen;
 	private Scene scena;
-	private String komunikat = "widok/Login.fxml";
+	private String komunikat = "widok/Kierownik.fxml";
 	private Alert alter;
 }
