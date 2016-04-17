@@ -16,7 +16,7 @@ public class Polaczenie {
 
 	/**
 	 * Metoda wezInstancje sprawdza warunek. Czy wewnetrzna instancja klasy PolaczenieZBD
-	 * jest wartosci null. Je¿eli tak to inicjalizuje instancje nowym obiektem tej klasy.
+	 * jest wartosci null. Jeï¿½eli tak to inicjalizuje instancje nowym obiektem tej klasy.
 	 * @return zainicjalizowany obiekt tej klasy typy PolaczenieZBD.
 	 */
 	public static Polaczenie wezInstancje(){
