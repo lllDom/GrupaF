@@ -47,8 +47,7 @@ public class KontrolerLogin implements Initializable{
 			alter.setContentText("Login lub haslo jest puste!");
 			alter.showAndWait();
 		}else{
-			Polaczenie pol = Polaczenie.wezInstancje();
-			pol.polacz();
+			
 		}
 	}
 

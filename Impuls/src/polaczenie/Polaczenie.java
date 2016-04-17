@@ -1,123 +1,152 @@
 package polaczenie;
-/**
- * @author GrupaF
- */
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
-/** Klasa Polaczenia z baza danych. */
+
 public class Polaczenie {
-	/** Prywatny konstruktor klasy PolaczenieZBD. */
 	private Polaczenie(){}
 
-	/**
-	 * Metoda wezInstancje sprawdza warunek. Czy wewnetrzna instancja klasy PolaczenieZBD
-	 * jest wartosci null. Je�eli tak to inicjalizuje instancje nowym obiektem tej klasy.
-	 * @return zainicjalizowany obiekt tej klasy typy PolaczenieZBD.
-	 */
 	public static Polaczenie wezInstancje(){
 		if (instancja == null){
 			instancja = new Polaczenie();
 		}
 		return instancja;
 	}
+	public static Connection wezPolaczenie() {
+		return polaczenie;
+	}
 
-	/**
-	 * Metoda polacz() laczy sie z baza danych.
-	 * @exception ClassNotFoundException w razie nie znalezienia sterownika.
-	 * @exception SQLException Gdy podano zle dane.
-	 */
-	public static void polacz(){
+	public static Connection wezPolaczenieZBazaDanych(){
+		polaczenie = null;
+
 		try {
-			Class.forName(nazwaSterownika);
-			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, haslo);
-
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Polaczono z Baza danych!");
-			alter.showAndWait();
-
+			Class.forName("org.postgresql.Driver");
 		} catch (ClassNotFoundException e) {
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Nie znaleziono sterownika!");
-			alter.showAndWait();
-		} catch (SQLException ex) {
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Podano zle dane polaczenia!");
-			alter.showAndWait();
+			e.printStackTrace();
+		}
+
+		try {
+			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, hasloUzytkownika);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return polaczenie;
+	}
+
+	public boolean czyAktywnePolaczenie(){
+		try {
+			if(polaczenie.isClosed()){
+				return false;
+			}else{
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	public void polacz(){
+		try {
+			Class.forName("org.postgresql.Driver");
+			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, hasloUzytkownika);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
-	public static void ponowniePolacz(){
+	public void rozlacz(){
 		try {
-			Class.forName(nazwaSterownika);
-			polaczenie = DriverManager.getConnection(url, nazwaUzytkownika, haslo);
-
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Polaczono z Baza danych!");
-			alter.showAndWait();
-
-		} catch (ClassNotFoundException e) {
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Nie znaleziono sterownika!");
-			alter.showAndWait();
-		} catch (SQLException ex) {
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Podano zle dane polaczenia!");
-			alter.showAndWait();
-		}
-	}
-
-	/**
-	 * Metoda rozlacz() konczy polaczenie z baza danych.
-	 * @exception ClassNotFoundException w razie nie znalezienia sterownika.
-	 * @exception SQLException gdy podano zle dane.
-	 */
-	public static void rozlacz(){
-		try {
-
-			Class.forName(nazwaSterownika);
 			polaczenie.close();
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Pomyslnie zakonczono polaczenie!");
-			alter.showAndWait();
-
-		} catch (ClassNotFoundException e) {
-			alter = new Alert(AlertType.INFORMATION);
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Nie znaleziono sterownika!");
-			alter.showAndWait();
-		} catch (SQLException ex) {
-			alter.setTitle("Komunikat!");
-			alter.setHeaderText(null);
-			alter.setContentText("Podano zle dane polaczenia!");
-			alter.showAndWait();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
-	private static String nazwaSterownika = "org.postgresql.Driver";
+	public void polaczPonownie(){
+		if(czyAktywnePolaczenie()){
+			return;
+		}else{
+			polacz();
+		}
+	}
+
+	public void wezAdmina(String login, String haslo){
+		Connection pol = wezPolaczenieZBazaDanych();
+		try {
+			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Admin USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
+			pre.setString(1, login);
+			pre.setString(2, haslo);
+			ResultSet rs = pre.executeQuery();
+
+			while(rs.next()){
+				String log = rs.getString("login");
+				System.out.println(log);
+				String has = rs.getString("haslo");
+				System.out.println(has);
+			}
+			rs.close();
+			pre.close();
+			pol.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void wezKierownika(String login, String haslo){
+		Connection pol = wezPolaczenieZBazaDanych();
+		try {
+			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Szefowie USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
+			pre.setString(1, login);
+			pre.setString(2, haslo);
+			ResultSet rs = pre.executeQuery();
+
+			while(rs.next()){
+				String log = rs.getString("login");
+				System.out.println(log);
+				String has = rs.getString("haslo");
+				System.out.println(has);
+			}
+			rs.close();
+			pre.close();
+			pol.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void wezPracownika(String login, String haslo){
+		Connection pol = wezPolaczenieZBazaDanych();
+		try {
+			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Pracownicy USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
+			pre.setString(1, login);
+			pre.setString(2, haslo);
+			ResultSet rs = pre.executeQuery();
+
+			while(rs.next()){
+				String log = rs.getString("login");
+				System.out.println(log);
+				String has = rs.getString("haslo");
+				System.out.println(has);
+			}
+			rs.close();
+			pre.close();
+			pol.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
 	private static String url = "jdbc:postgresql://localhost:5432/baza";
 	private static String nazwaUzytkownika = "postgres";
-	private static String haslo = "haslo";
+	private static String hasloUzytkownika = "haslo";
 	private static Connection polaczenie = null;
 	private static Polaczenie instancja = null;
-	private static Alert alter;
+	private static Alert alert;
 }
