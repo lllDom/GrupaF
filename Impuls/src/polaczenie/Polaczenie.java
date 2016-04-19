@@ -77,8 +77,9 @@ public class Polaczenie {
 		}
 	}
 
-	public void wezAdmina(String login, String haslo){
+	public boolean wezAdmina(String login, String haslo){
 		Connection pol = wezPolaczenieZBazaDanych();
+		String loginZBazy = null;
 		try {
 			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Admin USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
 			pre.setString(1, login);
@@ -86,21 +87,24 @@ public class Polaczenie {
 			ResultSet rs = pre.executeQuery();
 
 			while(rs.next()){
-				String log = rs.getString("login");
-				System.out.println(log);
-				String has = rs.getString("haslo");
-				System.out.println(has);
+				loginZBazy = rs.getString("login");
 			}
-			rs.close();
-			pre.close();
-			pol.close();
+
+			if(loginZBazy == null){
+				return false;
+			}else{
+				return true;
+			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 
-	public void wezKierownika(String login, String haslo){
+	public boolean wezKierownika(String login, String haslo){
 		Connection pol = wezPolaczenieZBazaDanych();
+		String loginZBazy = null;
 		try {
 			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Szefowie USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
 			pre.setString(1, login);
@@ -108,21 +112,24 @@ public class Polaczenie {
 			ResultSet rs = pre.executeQuery();
 
 			while(rs.next()){
-				String log = rs.getString("login");
-				System.out.println(log);
-				String has = rs.getString("haslo");
-				System.out.println(has);
+				loginZBazy = rs.getString("login");
 			}
-			rs.close();
-			pre.close();
-			pol.close();
+
+			if(loginZBazy == null){
+				return false;
+			}else{
+				return true;
+			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 
-	public void wezPracownika(String login, String haslo){
+	public boolean wezPracownika(String login, String haslo){
 		Connection pol = wezPolaczenieZBazaDanych();
+		String loginZBazy = null;
 		try {
 			PreparedStatement pre = pol.prepareStatement("SELECT login, haslo FROM Dane_osobowe JOIN Pracownicy USING (id_dana_osobowa) WHERE login = ? AND haslo = ?");
 			pre.setString(1, login);
@@ -130,17 +137,19 @@ public class Polaczenie {
 			ResultSet rs = pre.executeQuery();
 
 			while(rs.next()){
-				String log = rs.getString("login");
-				System.out.println(log);
-				String has = rs.getString("haslo");
-				System.out.println(has);
+				loginZBazy = rs.getString("login");
 			}
-			rs.close();
-			pre.close();
-			pol.close();
+
+			if(loginZBazy == null){
+				return false;
+			}else{
+				return true;
+			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return false;
 	}
 
 	private static String url = "jdbc:postgresql://localhost:5432/baza";

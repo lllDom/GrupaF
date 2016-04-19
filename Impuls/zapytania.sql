@@ -1,4 +1,9 @@
 -- Modul admin
+
+-- wyciag login
+SELECT login FROM Dane_osobowe JOIN Admin USING (id_dana_osobowa) WHERE login = '?';
+-- obciag haslo
+SELECT haslo FROM Dane_osobowe JOIN Admin USING (id_dana_osobowa) WHERE haslo = '?';
 -- Wyciag login gdy haslo sie zgadza
 SELECT login FROM Dane_osobowe JOIN Admin USING (id_dana_osobowa) WHERE haslo = '?';
 -- Wyciagamy haslo gdy login sie zgadza
